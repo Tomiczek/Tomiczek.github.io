@@ -323,7 +323,7 @@
   grid-column-start: 8; }
 
 .neko {
-  grid-column-start: 9; }
+  grid-column-start: 10; }
 
 .typewriter {
   overflow: hidden;
@@ -433,10 +433,13 @@
   /* this prevents the animation from restarting! */ }
 
 .neko {
-  background-image: url(images/neko.png);
+  background-image: url(images/cat2.gif);
   background-size: contain;
   width: 200px;
-  height: 413px; }
+  height: 413px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  position: relative; }
 
 .gaijin {
   background-image: url(images/gaijin.png);
@@ -658,6 +661,7 @@ body {
 .question {
   position: absolute;
   top: 120%;
+  left: -20%;
   max-width: 200px; }
 
 .read-more:hover {
@@ -679,7 +683,7 @@ body {
 
 .quiz {
   position: absolute;
-  bottom: -30%;
+  bottom: -20%;
   left: 3%;
   max-width: 250px;
   max-height: 300px; }
@@ -700,17 +704,37 @@ body {
   background: orange;
   padding: 5px 10px;
   border-radius: 10px;
-  border: orange;
+  border: orange solid;
   color: white;
   font-family: 'VT323', monospace;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  transition: all 0.2s ease-in; }
+
+.submitBtn:not([disabled]):hover {
+  border: dashed orange;
+  color: orange;
+  background-color: white;
+  transition: all 0.2s ease-in; }
+
+.submitBtn:disabled {
+  background-color: grey;
+  border: grey solid;
+  cursor: default; }
 
 .radioInput {
-  margin-right: 5px; }
+  margin-right: 5px;
+  margin-left: 1px; }
 
 .japaneseSpeech ul {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 5px; }
+
+.points {
+  position: absolute;
+  top: 50%;
+  left: -27%;
+  font-size: 22px;
+  color: darkorange; }
 
